@@ -1,5 +1,13 @@
 # mqtt-trilobot
 
+First make sure your Pi is up to date.
+```
+sudo apt update
+sudo apt upgrade
+
+```
+
+
 Install OpenCV
 
 sudo apt install python3-opencv
@@ -8,6 +16,11 @@ Install PiCamera
 
 sudo pip install picamera
 
+Note:
+If you're using VNC.
+
+Uncommenting hdmi_force_hotplug=1 in /boot/config.txt then rebooting solved problems with enabling 'legacy camera'
+and VNC server
 
 
 #Installing and Upgrading Node-RED
@@ -29,11 +42,9 @@ To disable the service, run the command:
 sudo systemctl disable nodered.service
 ```
 #Mosquitto
-```
-sudo apt update
-sudo apt upgrade
 
-sudo apt install mosquitto mosquitto-clients.
+```
+sudo apt install mosquitto mosquitto-clients
 
 sudo systemctl status mosquitto.
 
@@ -42,12 +53,15 @@ sudo nano /etc/mosquitto/mosquitto.conf
 ```
 
 Move to the end of the file using the arrow keys and paste the following two lines:
+
 ```
 listener 1883
 allow_anonymous true
 ```
 
 
-#Install Node Red Image Tools
+#Install Node Red Image and Alexa Tools
+Manage Palette/Install
 
 node-red-contrib-image-tools
+node-red-contrib-alexa-home-skill

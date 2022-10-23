@@ -25,7 +25,8 @@ import numpy
 
 from enum import Enum
 
-MQTT_BROKER_HOST = '127.0.0.1'
+#MQTT_BROKER_HOST = '127.0.0.1'
+MQTT_BROKER_HOST = '192.168.1.20'
 
 class RobotState(Enum):
     STATE_IDLE = 0
